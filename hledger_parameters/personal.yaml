@@ -1,0 +1,47 @@
+# User personal tax configuration
+filing_status: joint  # Options: joint, single, head
+
+# Hledger journal directory path
+journal_directory: ~/finance
+
+# Solo 401(k) contribution configuration
+# Options:
+#   "maximize" - contribute the maximum allowed (19.732% of net business income)
+#   "none" or 0 - contribute nothing
+#   percentage (e.g., 50) - contribute that percentage of the maximum allowed
+solo_401k_contribution: maximize
+
+# Additional personal federal deduction
+# This is an additional deduction beyond the standard deduction
+additional_federal_deduction: 0
+
+# Mortgage interest calculation configuration
+# Option 1: Per-year override (takes precedence if provided)
+interest_by_year:
+  2021: 8500.0
+  2022: 8200.0
+  2023: 7900.0
+  2024: 7600.0
+
+# Option 2: Use hledger account to get interest paid (uncomment to use)
+#interest_account: IncomeInvest:Interest
+
+# Option 3: Use amortization formula (used if no per-year override or hledger account)
+principal: 450000.00
+monthly_rate: 0.004167  # 5% annual rate / 12
+payment: 2415.00
+start_year: 2020
+
+# Home office deduction configuration
+home_office:
+  # Accounts to include in home office expenses
+  accounts:
+    - Property_Tax
+    - Expenses:Insurance:Home
+    - Utilities:Water
+    - Internet
+    - Utilities:Trash
+  # Percentage of home used for business
+  deduction_rate: 0.10
+  # Fixed deduction amount e.g. home depreciation
+  fixed_deduction: 0

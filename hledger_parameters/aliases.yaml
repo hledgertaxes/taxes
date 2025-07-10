@@ -1,0 +1,58 @@
+pretax_healthcare_expenses:
+  - Expenses:pretax:Healthcare
+  - Expenses:pretax:DependentCare
+pretax_retirement:
+  - Investment:pretax:EmployerPensionContributions
+  - Investment:pretax:Company401k
+special_income:
+  - Income:W2:Company:PaidFamilyLeave
+queries:
+  total_inc:
+    accounts: [Income:]
+    remove_groups: [pretax_healthcare_expenses, pretax_retirement]
+    exclude_accounts: []
+  w2:
+    accounts: [Income:W2]
+    remove_groups: [pretax_healthcare_expenses, pretax_retirement]
+  w2_medicare:
+    accounts: [Income:W2]
+    remove_groups: [pretax_healthcare_expenses]
+    exclude_accounts: [Income:W2:Company:PaidFamilyLeave]
+  w2_ca:
+    accounts: [Income:W2]
+    remove_groups: [pretax_healthcare_expenses, pretax_retirement]
+    exclude_accounts: [Income:W2:Company:PaidFamilyLeave]
+  dividend_longterm:
+    accounts: [IncomeInvest:Dividend]
+  dividend_shortterm:
+    accounts: [IncomeInvest:DShort]
+  dividend_shortterm_state:
+    accounts: [IncomeInvest:DShort]
+    exclude_accounts:
+      - IncomeInvest:DShort:Fed
+  dividend_qualified:
+    accounts: [IncomeInvest:DShort:199A]
+  capital_gain_longterm:
+    accounts: [IncomeInvest:Longterm]
+  capital_gain_shortterm:
+    accounts: [IncomeInvest:Shortterm]
+  loss:
+    accounts: [IncomeInvest:Loss]
+  interest:
+    accounts: [IncomeInvest:Interest]
+  interest_state:
+    accounts: [IncomeInvest:Interest]
+    exclude_accounts:
+      - IncomeInvest:Interest:Federal # not taxed by state
+  fed_tax_paid:
+    accounts: [taxpayment:federal]
+  soc_tax_paid:
+    accounts: [taxpayment:social]
+  med_tax_paid:
+    accounts: [taxpayment:medicare]
+  state_tax_paid:
+    accounts: [taxpayment:state]
+  business_expenses:
+    accounts: [Expenses:Business]
+  foreign_credit:
+    accounts: [taxpayment:foreign]

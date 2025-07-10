@@ -1,0 +1,72 @@
+joint:
+  brackets:
+    - threshold: 0
+      rate: 0.01
+    - threshold: 21512
+      rate: 0.02
+    - threshold: 50998
+      rate: 0.04
+    - threshold: 80490
+      rate: 0.06
+    - threshold: 111732
+      rate: 0.08
+    - threshold: 141212
+      rate: 0.093
+    - threshold: 721318
+      rate: 0.103
+    - threshold: 865574
+      rate: 0.113
+    - threshold: 1442628
+      rate: 0.123
+  standard_deduction: 11080
+  surcharges:
+    - threshold: 1000000
+      rate: 0.01
+single:
+  brackets:
+    - threshold: 0
+      rate: 0.01
+    - threshold: 10756
+      rate: 0.02
+    - threshold: 25499
+      rate: 0.04
+    - threshold: 40245
+      rate: 0.06
+    - threshold: 55866
+      rate: 0.08
+    - threshold: 70606
+      rate: 0.093
+    - threshold: 360659
+      rate: 0.103
+    - threshold: 432787
+      rate: 0.113
+    - threshold: 721314
+      rate: 0.123
+  standard_deduction: 5540
+  surcharges:
+    - threshold: 1000000
+      rate: 0.01
+head:
+  brackets:
+    - threshold: 0
+      rate: 0.01
+    - threshold: 21527
+      rate: 0.02
+    - threshold: 51000
+      rate: 0.04
+    - threshold: 65744
+      rate: 0.06
+    - threshold: 81364
+      rate: 0.08
+    - threshold: 96107
+      rate: 0.093
+    - threshold: 490493
+      rate: 0.103
+    - threshold: 588593
+      rate: 0.113
+    - threshold: 980987
+      rate: 0.123
+  standard_deduction: 11080
+  surcharges:
+    - threshold: 1000000
+      rate: 0.01 

@@ -1,0 +1,21 @@
+brackets:
+  - threshold: 0
+    rate: 0.01
+  - threshold: 21400
+    rate: 0.02
+  - threshold: 50860
+    rate: 0.04
+  - threshold: 80300
+    rate: 0.06
+  - threshold: 110800
+    rate: 0.08
+  - threshold: 139000
+    rate: 0.093
+  - threshold: 715728
+    rate: 0.103
+  - threshold: 859870
+    rate: 0.113
+standard_deduction: 11357
+surcharges:
+  - threshold: 1000000
+    rate: 0.01 

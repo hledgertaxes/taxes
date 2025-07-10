@@ -1,0 +1,80 @@
+joint:
+  brackets:
+    - threshold: 0
+      rate: 0.10
+    - threshold: 20550
+      rate: 0.12
+    - threshold: 83550
+      rate: 0.22
+    - threshold: 178150
+      rate: 0.24
+    - threshold: 340100
+      rate: 0.32
+    - threshold: 431900
+      rate: 0.35
+    - threshold: 647850
+      rate: 0.37
+  standard_deduction: 25900
+  ss_max: 9333.60
+  medicare_threshold: 250000
+  niit_threshold: 250000
+single:
+  brackets:
+    - threshold: 0
+      rate: 0.10
+    - threshold: 10275
+      rate: 0.12
+    - threshold: 41775
+      rate: 0.22
+    - threshold: 89075
+      rate: 0.24
+    - threshold: 170050
+      rate: 0.32
+    - threshold: 215950
+      rate: 0.35
+    - threshold: 539900
+      rate: 0.37
+  standard_deduction: 12950
+  ss_max: 9333.60
+  medicare_threshold: 200000
+  niit_threshold: 200000
+head:
+  brackets:
+    - threshold: 0
+      rate: 0.10
+    - threshold: 14650
+      rate: 0.12
+    - threshold: 55900
+      rate: 0.22
+    - threshold: 89050
+      rate: 0.24
+    - threshold: 170050
+      rate: 0.32
+    - threshold: 215950
+      rate: 0.35
+    - threshold: 539900
+      rate: 0.37
+  standard_deduction: 19400
+  ss_max: 9333.60
+  medicare_threshold: 200000
+  niit_threshold: 200000
+separate:
+  brackets:
+    - threshold: 0
+      rate: 0.10
+    - threshold: 10275
+      rate: 0.12
+    - threshold: 41775
+      rate: 0.22
+    - threshold: 89075
+      rate: 0.24
+    - threshold: 170050
+      rate: 0.32
+    - threshold: 215950
+      rate: 0.35
+    - threshold: 323925
+      rate: 0.37
+  standard_deduction: 12950
+  ss_max: 9333.60
+  medicare_threshold: 125000
+  niit_threshold: 125000 
